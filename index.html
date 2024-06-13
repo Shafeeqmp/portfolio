@@ -334,7 +334,7 @@
 					<div class="section-title">
 						<h2>Contact Me</h2>
 					</div>
-					<form id="submit-form" class="Contact-form" action="https://api.web3forms.com/submit" method="POST">
+					<form id="submit-form" class="Contact-form" name="myForm" action="https://api.web3forms.com/submit" onsubmit="return validateForm()" method="post">
 						<div class="row">
 							<div class="col-md-6">
 								<input type="hidden" name="access_key" value="a13a01e2-d1cc-4eaa-909e-82e16f119a8f">
@@ -399,5 +399,36 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             })
         })
     </script> -->
+	<script>
+		function validateForm() {
+		  let x = document.forms["myForm"]["name"].value;
+		  if (x == "") {
+			alert("Name Must be filled out");
+			return false;
+		  }
+		}
+		function validateForm() {
+		  let x = document.forms["myForm"]["email"].value;
+		  if (x == "") {
+			alert("Email Must be filled out");
+			return false;
+		  }
+		}
+		function validateForm() {
+		  let x = document.forms["myForm"]["subject"].value;
+		  if (x == "") {
+			alert("Subject Must be filled out");
+			return false;
+		  }
+		}
+		function validateForm() {
+		  let x = document.forms["myForm"]["message"].value;
+		  if (x == "") {
+			alert("Message Must be filled out");
+			return false;
+		  }
+		}
+		
+		</script>
 </body>
 </html>
